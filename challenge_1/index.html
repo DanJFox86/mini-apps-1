@@ -10,7 +10,7 @@
         height: 150px;
         color: blue;
         text-align: center;
-        font-size: 140px;
+        font-size: 130px;
       }
     </style>
   </head>
@@ -20,28 +20,39 @@
       <h2>Tac.</h2>
       <h1>TOOOOOOOOOOOEEEEEEEEEE!!!!</h1>
       <h6 id="status">Start! Player 1 is X's</h6>
-      <button onClick="clearBoard()">Reset</button>
+      <button id="reset" onClick="ticTacClick.call(this)">Reset</button>
     </div>
     <table id="board" align="center" border="1px">
-    <tbody>
-      <tr>
-        <td onClick="cellClick.call(this)" class="cell" id="00"></td>
-        <td onClick="cellClick.call(this)" class="cell" id="01"></td>
-        <td onClick="cellClick.call(this)" class="cell" id="02"></td>
-      </tr> 
-      <tr>
-        <td onClick="cellClick.call(this)" class="cell" id="10"></td>
-        <td onClick="cellClick.call(this)" class="cell" id="11"></td>
-        <td onClick="cellClick.call(this)" class="cell" id="12"></td>
-      </tr> 
-      <tr>
-        <td onClick="cellClick.call(this)" class="cell" id="20"></td>
-        <td onClick="cellClick.call(this)" class="cell" id="21"></td>
-        <td onClick="cellClick.call(this)" class="cell" id="22"></td>
-      </tr> 
-    </tbody>
-
-      </table>
-  
+      <tbody>
+        <tr>
+          <td onClick="ticTacClick.call(this)" class="cell" id="00"></td>
+          <td onClick="ticTacClick.call(this)" class="cell" id="01"></td>
+          <td onClick="ticTacClick.call(this)" class="cell" id="02"></td>
+        </tr> 
+        <tr>
+          <td onClick="ticTacClick.call(this)" class="cell" id="10"></td>
+          <td onClick="ticTacClick.call(this)" class="cell" id="11"></td>
+          <td onClick="ticTacClick.call(this)" class="cell" id="12"></td>
+        </tr> 
+        <tr>
+          <td onClick="ticTacClick.call(this)" class="cell" id="20"></td>
+          <td onClick="ticTacClick.call(this)" class="cell" id="21"></td>
+          <td onClick="ticTacClick.call(this)" class="cell" id="22"></td>
+        </tr> 
+      </tbody>
+    </table>
+    <table id="board" align="center" border="1px">
+      <tbody>
+        <tr><th></th><th>Name</th><th>Marker</th><th>Tally</th></tr>
+        <tr>
+          <th><button id="submitName1" onClick="ticTacClick.call(this)">Submit</button></th>
+          <th contenteditable='true' id="p1Name">Player 1</th><th>X</th><th id="p1Win">0</th>
+        </tr>
+        <tr>
+          <th><button id="submitName2" onClick="ticTacClick.call(this)">Submit</button></th>
+          <th contenteditable='true' id="p2Name">Player 2</th><th>O</th><th id="p2Win">0</th>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
