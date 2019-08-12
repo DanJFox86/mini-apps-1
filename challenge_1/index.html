@@ -1,2 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script src="app.js"></script>
+    <style>
+      td {
+        width: 150px; 
+        height: 150px;
+        color: blue;
+        text-align: center;
+        font-size: 140px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title" align="center"> 
+      <h4>Tic.</h4>
+      <h2>Tac.</h2>
+      <h1>TOOOOOOOOOOOEEEEEEEEEE!!!!</h1>
+      <h6 id="status">Start! Player 1 is X's</h6>
+      <button onClick="clearBoard()">Reset</button>
+    </div>
+    <table id="board" align="center" border="1px">
+    <tbody>
+      <tr id="r0">
+        <td onClick="cellClick.call(this)" class="cell" id="00"></td>
+        <td onClick="cellClick.call(this)" class="cell" id="01"></td>
+        <td onClick="cellClick.call(this)" class="cell" id="02"></td>
+      </tr> 
+      <tr id="row1">
+        <td onClick="cellClick.call(this)" class="cell" id="10"></td>
+        <td onClick="cellClick.call(this)" class="cell" id="11"></td>
+        <td onClick="cellClick.call(this)" class="cell" id="12"></td>
+      </tr> 
+      <tr id="row2">
+        <td onClick="cellClick.call(this)" class="cell" id="20"></td>
+        <td onClick="cellClick.call(this)" class="cell" id="21"></td>
+        <td onClick="cellClick.call(this)" class="cell" id="22"></td>
+      </tr> 
+    </tbody>
 
-
+      </table>
+  
+  </body>
+</html>
