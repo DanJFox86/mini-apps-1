@@ -1,0 +1,29 @@
+{
+  "name": "challenge1",
+  "version": "1.0.0",
+  "description": "Tic Tac Toe Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanJFox86/hrsf122-mini-apps-1.git"
+  },
+  "keywords": [
+    "tic",
+    "tac",
+    "toe"
+  ],
+  "author": "DanJFox86",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanJFox86/hrsf122-mini-apps-1/issues"
+  },
+  "homepage": "https://github.com/DanJFox86/hrsf122-mini-apps-1#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "challenge2",
+  "version": "1.0.0",
+  "description": "Client takes JSON data from form, sends it to the server which converts it to CSV and sends it back to the client",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon --watch ./ server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanJFox86/hrsf122-mini-apps-1/tree/master/challenge_2"
+  },
+  "keywords": [
+    "express",
+    "json",
+    "csv"
+  ],
+  "author": "DanJFox86",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-busboy": "^7.0.1",
+    "express-fileupload": "^1.1.5",
+    "file-system": "^2.2.2",
+    "multer": "^1.4.2",
+    "nodemon": "^1.19.1",
+    "underscore": "^1.9.1"
+  }
+}

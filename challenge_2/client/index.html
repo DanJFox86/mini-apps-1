@@ -1,2 +1,16 @@
-
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CSV Report Generator</title>
+    <script src="http://localhost:3000/app.js"></script>
+  </head>
+  <body>
+    <form id="uploadbanner" enctype="multipart/form-data" method="post" action="http://localhost:3000/submit">
+      <input id="fileupload" name="myfile" type="file" />
+      <input type="submit" value="submit" id="submit" />
+      <br><label for="csv">CSV:</label></br>
+      <br><textarea name="csv" rows="15" cols="100" value="CSV"></textarea></br>
+    </form>
+  </body>
+</html>
