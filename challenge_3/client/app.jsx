@@ -8,7 +8,7 @@ class F3 extends React.Component {
     this.state = {
       billingInfo: props,
       cardNumber: '',
-      expireDate: '12/12/2020',
+      expireDate: '',
       cvvNumber: '',
       cardZipcode: ''
     };
@@ -23,48 +23,46 @@ class F3 extends React.Component {
     this.setState({
       cardNumber: event.target.value,
     });
-    console.log(this.state.cardNumber);
+    // console.log(this.state.cardNumber);
   }
 
   changeExpireDateHandler(event) {
     this.setState({
       expireDate: event.target.value,
     });
-    console.log(this.state.expireDate);
+    // console.log(this.state.expireDate);
   }
 
   changeCvvNumberHandler(event) {
     this.setState({
       cvvNumber: event.target.value,
     });
-    console.log(this.state.cvvNumber);
+    // console.log(this.state.cvvNumber);
   }
 
   changeCardZipcodeHandler(event) {
     this.setState({
       cardZipcode: event.target.value,
     });
-    console.log(this.state.cardZipcode);
+    // console.log(this.state.cardZipcode);
   }
 
   submitHandler(event) {
-    console.log(this.state);
+    // console.log(this.state);
     // send info to server
     var data = this.state;
     $.ajax({
         type: "POST",
         url: "http://localhost:3000/purchase",
         dataType: "json",
-        data: {
-            info: data
-        },
+        data: data,
         success: function (data) {
-           alert('Success');
+           alert(data.message);
            ReactDOM.render(<App />, document.getElementById('app'));
 
         },
         error: function (err) {
-         alert('Got an erro');
+         alert('Got an error', err);
          console.log(err);
          ReactDOM.render(<App />, document.getElementById('app'));
         }
@@ -107,7 +105,7 @@ class F3 extends React.Component {
 class F2 extends React.Component {
 
   constructor(props) {
-    console.log(props);
+    // console.log(props);
     // Equivalent to ES5's React.Component.call(this, props)
     super(props);
     this.state = {
@@ -132,46 +130,46 @@ class F2 extends React.Component {
     this.setState({
       address1: event.target.value,
     });
-    console.log(this.state.address1);
+    // console.log(this.state.address1);
   }
 
   changeAddress2Handler(event) {
     this.setState({
       address2: event.target.value,
     });
-    console.log(this.state.address2);
+    // console.log(this.state.address2);
   }
 
   changeCityHandler(event) {
     this.setState({
       city: event.target.value,
     });
-    console.log(this.state.city);
+    // console.log(this.state.city);
   }
 
   changeStateHandler(event) {
     this.setState({
       state: event.target.value,
     });
-    console.log(this.state.state);
+    // console.log(this.state.state);
   }
 
   changeZipcodeHandler(event) {
     this.setState({
       zipcode: event.target.value,
     });
-    console.log(this.state.zipcode);
+    // console.log(this.state.zipcode);
   }
 
   changePhoneNumberHandler(event) {
     this.setState({
       phoneNumber: event.target.value,
     });
-    console.log(this.state.phoneNumber);
+    // console.log(this.state.phoneNumber);
   }
 
   submitHandler(event) {
-    console.log(this.state);
+    // console.log(this.state);
     ReactDOM.render(<F3 info={this.state}/>, document.getElementById('app'));
 
   }
@@ -243,7 +241,7 @@ class F1 extends React.Component {
                        name: this.state.formControls.name,
                        password: this.state.formControls.password}
     });
-    console.log(this.state.formControls.email);
+    // console.log(this.state.formControls.email);
   }
 
   changeUserNameHandler(event) {
@@ -252,7 +250,7 @@ class F1 extends React.Component {
                        name: event.target.value,
                        password: this.state.formControls.password}
     });
-    console.log(this.state.formControls.name);
+    // console.log(this.state.formControls.name);
   }
 
   changePasswordHandler(event) {
@@ -261,13 +259,13 @@ class F1 extends React.Component {
                        name: this.state.formControls.name,
                        password: event.target.value }
     });
-    console.log(this.state.formControls.password);
+    // console.log(this.state.formControls.password);
   }
   submitHandler(event) {
     // this.setState({
     //   formControls : { password: event.target.value}
     // });
-    console.log(this.state.formControls);
+    // console.log(this.state.formControls);
     ReactDOM.render(<F2 userInfo={this.state.formControls}/>, document.getElementById('app'));
 
   }
@@ -318,21 +316,21 @@ class App extends React.Component {
     this.setState({
       formControls : { email: event.target.value}
     });
-    console.log(this.state.formControls.email);
+    // console.log(this.state.formControls.email);
   }
 
   changeUserNameHandler(event) {
     this.setState({
       formControls : { name: event.target.value}
     });
-    console.log(this.state.formControls.name);
+    // console.log(this.state.formControls.name);
   }
 
   changePasswordHandler(event) {
     this.setState({
       formControls : { password: event.target.value}
     });
-    console.log(this.state.formControls.password);
+    // console.log(this.state.formControls.password);
   }
 
   render() {
