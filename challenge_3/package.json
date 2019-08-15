@@ -1,0 +1,38 @@
+{
+  "name": "challenge_3",
+  "version": "1.0.0",
+  "description": "single-page app that takes a user through a series of forms that simulate a shopping cart checkout experience.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon --watch ./ server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanJFox86/hrsf122-mini-apps-1/tree/master/challenge_3"
+  },
+  "keywords": [
+    "shopping",
+    "cart",
+    "singlepage"
+  ],
+  "author": "DanJFox86",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "nodemon": "^1.19.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  }
+}
