@@ -1,0 +1,36 @@
+{
+  "name": "challenge_4",
+  "version": "1.0.0",
+  "description": "single page app for connect4",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon --watch ./ server.js",
+    "react-dev": "webpack -d --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanJFox86/hrsf122-mini-apps-1/tree/master/challenge_4"
+  },
+  "keywords": [
+    "connect4",
+    "express",
+    "nodemon",
+    "react",
+    "webpack"
+  ],
+  "author": "DanJFox86",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
+}
